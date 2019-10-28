@@ -4,6 +4,7 @@
   - [Git Basics](#git-basics)
   - [Git Collaboration](#git-collaboration)
 - [Linux CLI and HTTP](#linux-cli-and-http)
+- [HTML & CSS](#html-&-css)
 ## Git
 
 ### _Git Basics_
@@ -46,3 +47,12 @@
 - [x] processes
 ![linux-survival](linux-cli/linux-survival.png)
 ***
+
+## HTML & CSS
+**What learned a new one:**
+- [x] Selectors and Visual Rules
+- [x] The Box Model
+- [x] Display and Positioning
+- [x] Colors & Typography
+- [x] Grid
+![HTML & CSS](html-css/codecademy-learn-css.png)
