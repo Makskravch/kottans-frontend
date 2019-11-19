@@ -5,6 +5,7 @@
   - [Git Collaboration](#git-collaboration)
 - [Linux CLI and HTTP](#linux-cli-and-http)
 - [HTML & CSS](#html-&-css)
+- [JavaScript](#javascript)
 ## Git
 
 ### _Git Basics_
@@ -54,5 +55,23 @@
 - [x] The Box Model
 - [x] Display and Positioning
 - [x] Colors & Typography
+- [x] Flexbox
 - [x] Grid
 ![HTML & CSS](html-css/codecademy-learn-css.png)
+![HTML & CSS](html-css/FCC_Responsive_Web_Design_Certification.png)
+***
+
+## Javascript
+**What learned a new one:**
+- [x] Basic javascript
+- [x] ES6
+- [ ] Debugging
+- [ ] Basic data structures
+- [ ] Basic algorithm scripting
+- [x] Regular expression
+- [x] Object oriented programming
+- [x] Functional programming
+- [ ] Intermediate algorithm scripting
+- [ ] JavaScript algorithms and data structures projects
+![HTML & CSS](js/FFC_JavaScript_Algorithms_and_Data_Structures_Certification.png)
+***
