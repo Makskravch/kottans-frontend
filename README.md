@@ -4,7 +4,7 @@
   - [Git Basics](#git-basics)
   - [Git Collaboration](#git-collaboration)
 - [Linux CLI and HTTP](#linux-cli-and-http)
-- [HTML & CSS](#html-&-css)
+- [HTML & CSS](#html--css)
 - [JavaScript](#javascript)
 ## Git
 
