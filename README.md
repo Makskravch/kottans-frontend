@@ -23,11 +23,8 @@
 - [x] Undoing Changes
 - [x] Push & Pull -- Git Remotes
 - [x] Git commands: `init`, `clone`, `add`, `commit`, `checkout`, `branch`, `merge`, ...
-      <details>
-      <summary>Screenshot</summary>
-      ![udacity-git-basics](./git/udacity-git-basics.png)
-      ![learngitbranching](./git/learngitbranching-basics.png)
-      </detail>
+
+[![screenshots-icon](./screenshots-icon.png)](./git/git-basics)
 
 ### _Git Collaboration_
 
@@ -38,17 +35,15 @@
 - [x] Git commands: `push`, `fetch`, `pull`, ...
 - [x] I am better understand pull request and Fork repo
 - [x] Staying in Sync With A Remote Repo
-      <details>
-      <summary>Screenshot</summary>
-      ![udacity-git-collaboration](./git/udacity-git-collaboration.png)
-      ![learngitbranching](./git/learngitbranching-collaboration.png)
-      </detail>
+
+[![screenshots-icon](./screenshots-icon.png)](./git/git-collaboration)
 
 ---
 
 ## Linux CLI and HTTP
 
 _It is very unusual to work from the command line._
+
 **What learned a new one:**
 
 - [x] I learned a few new useful commands like `find`, `cat`, `grep` and `echo`.
@@ -63,10 +58,8 @@ _It is very unusual to work from the command line._
 - [x] wild cards and patterns
 - [x] finding files and text
 - [x] processes
-      <details>
-      <summary>Screenshot</summary>
-      ![linux-survival](./linux-cli/linux-survival.png)
-      </detail>
+
+[![screenshots-icon](./screenshots-icon.png)](./linux-cli/linux-survival.png)
 
 ---
 
@@ -80,12 +73,8 @@ _It is very unusual to work from the command line._
 - [x] Colors & Typography
 - [x] Flexbox
 - [x] Grid
-      <details>
-      <summary>Screenshot</summary>
-      ![HTML & CSS](./html-css/codecademy-learn-css.png)
-      ![HTML & CSS](./html-css/flexboxfroggy.png)
-      ![HTML & CSS](./html-css/FCC_Responsive_Web_Design_Certification.png)
-      </detail>
+
+[![screenshots-icon](./screenshots-icon.png)](./html-css)
 
 ---
 
@@ -103,18 +92,57 @@ _It is very unusual to work from the command line._
 - [x] Functional programming
 - [x] Intermediate algorithm scripting
 - [ ] JavaScript algorithms and data structures projects
-      <details>
-      <summary>Screenshot</summary>
-      ![HTML & CSS](./js/FFC_JavaScript_Algorithms_and_Data_Structures_Certification.png)
-      </detail>
+
+[![screenshots-icon](./screenshots-icon.png)](./js/FFC_JavaScript_Algorithms_and_Data_Structures_Certification.png)
 
 ---
 
 ## Document Object Model
 
-- **What learned a new one:** text placeholder
-- **What surprised** text placeholder
-- **What will be used in practice** text placeholder
-- **General overview** text placeholder
+- JavaScript and the DOM
+
+  - **What learned a new one:**
+    - The `.appendChild()` method will move an element from its current position to the new position.
+    - The Chrome browser has a special `monitorEvents()` function that will let us see different events as they are occurring.
+    - The standard way to measure how long it takes code to run is by using `performance.now()`.
+    - Changes made to a DocumentFragment `.createDocumentFragment()` happen off-screen; there's no reflow and repaint cost while you build this.
+  - **What surprised**
+
+    - Break Up Long-Running Code
+
+      ```javascript
+      let count = 1;
+
+      function generateParagraphs() {
+        const fragment = document.createDocumentFragment();
+
+        for (let i = 1; i <= 500; i++) {
+          const newElement = document.createElement("p");
+          newElement.textContent = "This is paragraph number " + count;
+          count = count + 1;
+
+          fragment.appendChild(newElement);
+        }
+
+        document.body.appendChild(fragment);
+
+        if (count < 20000) {
+          setTimeout(generateParagraphs, 0);
+        }
+      }
+
+      generateParagraphs();
+      ```
+
+  - **What will be used in practice**
+    - Break Up Long-Running Code
+
+  [![screenshots-icon](./screenshots-icon.png)](./document-object-model/JavaScript-and-the-DOM.png)
+
+- freecodecamp Algorithm Scripting Challenges
+  - **What learned a new one:** text placeholder
+  - **What surprised** text placeholder
+  - **What will be used in practice** text placeholder
+  - **General overview** text placeholder
 
 ---
