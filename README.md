@@ -1,51 +1,107 @@
-# kottans-frontend
+# kottans-frontend course [![Kottans-Frontend](https://img.shields.io/badge/%3D%28%5E.%5E%29%3D-frontend-yellow.svg)](https://github.com/kottans/frontend)
 
 ## My schedule and progress
+
+1. **General**
 
 - [x] [Git and GitHub](#1-git-and-gitHub)
   - [x] [Git Basics](#11-git-basics)
   - [x] [Git Collaboration](#12-git-collaboration)
 - [x] [Linux CLI and HTTP](#2-linux-cli-and-http)
+
+2. **Front-End Basics**
+
 - [x] [HTML & CSS](#3-html--css)
 - [x] [JavaScript](#4-javascript)
 - [x] [Document Object Model](#5-document-object-model)
   - [x] [Javascript and the Dom](#51-javaScript-and-the-dom)
   - [x] [freecodecamp Algorithm Scripting Challenges](#52-freecodecamp-algorithm-scripting-challenges)
 
-## 1. Git and GitHub
+3. **Advanced Topics**
 
-### 1.1. Git Basics
-
-**What learned a new one:**
-
-- [x] What is Version Control?
-- [x] Create a Git Repo
-- [x] Review a Repo's History
-- [x] Add Commits To a Repo
-- [x] Tagging, Branching, Merging
-- [x] Undoing Changes
-- [x] Push & Pull -- Git Remotes
-- [x] Git commands: `init`, `clone`, `add`, `commit`, `checkout`, `branch`, `merge`, ...
-
-[![screenshots-placeholder](./screenshots-icon.png)](./git/git-basics)
-
-### 1.2. Git Collaboration
-
-**What learned a new one:**
-
-- [x] Working with remotes
-- [x] Working on another developer's repo
-- [x] Git commands: `push`, `fetch`, `pull`, ...
-- [x] I am better understand pull request and Fork repo
-- [x] Staying in Sync With A Remote Repo
-
-[![screenshots-placeholder](./screenshots-icon.png)](./git/git-collaboration)
+- [ ] [Building a Tiny JS World (pre-OOP) - practice](#9-building-a-tiny-js-world-pre-oop-practice)
+- [ ] [Object oriented JS - practice](#10-object-oriented-js-practice)
+- [ ] [OOP exercise - practice](#11-oop-exercise-practice)
+- [ ] [Offline Web Applications](#12-offline-web-applications)
+- [ ] [Memory pair game — real project!](#13-memory-pair-game-real-project)
+- [ ] [Website Performance Optimization](#14-website-performance-optimization)
+- [ ] [Friends App - real project!](#15-friends-app-real-project)
 
 ---
 
-## 2. Linux CLI and HTTP
+## GENERAL
 
-### 2.1. [Linux Survival](https://linuxsurvival.com/linux-tutorial-introduction/)
+### 1. Git and GitHub
+
+#### 1.1. Git Basics
+
+- **What learned a new one:**
+
+  - Git commands: `init`, `clone`, `add`, `commit`, `checkout`, `branch`, `merge`, ...
+  - Repeated and used next git commands:
+    | Command | Usage |
+    | --- | --- |
+    | `git log`, `git show` | inspecting commits |
+    | `git rm --cached <filename>` | unstaging files |
+    | `git diff` | difference between working directory and last commit |
+  - Got acquainted with Less command line pager and it's commands for navigating through the history of commits:
+    | Key | Usage |
+    | --- | --- |
+    | `j` or `↓` | scroll :arrow_down: by a line |
+    | `d` | scroll :arrow_down: by a half-page |
+    | `f` | scroll :arrow_down: by a page |
+    | `k` or `↑` | scroll :arrow_up: by a line |
+    | `u` | scroll :arrow_up: by a half-page |
+    | `b` | scroll :arrow_up: by a page |
+  - I learned git rebase -i for interactive rebase (when we use flags to perform some actions like reordering,combining, omitting, editing etc on the commits we're rebasing).
+  - I learned git cherry pick command which provide ability to include changes of specific commit into current branch.
+
+- **What will be used in practice**
+  - 'single-unit-change per commit' approach (no more combined commits!).
+  - [Git playground](https://learngitbranching.js.org/) to recheck my understanding of already known commands or to understand new ones.
+  - `git rebase` with its flags for interactive rebasing and `git cherry-pick` to copy a series of commits below HEAD.
+  - `git fetch` to fetch changes from remote and udpate local representation of the remote.
+  - `git reflog` to inspect repository changes history and know what to reset if needed.
+  - `git branch -f <branch> <commit-ref>` to reassign branch pointer to another commit.
+  - `git checkout <commit-ref>` to reassign HEAD pointer to commit.
+  - `git pull` (fetch and a merge).
+  - `git pull --rebase` (fetch and a rebase, creates linear commits history).
+
+[![screenshots-placeholder](./markdown-styling/screenshots-icon.png)](./git/git-basics)
+
+#### 1.2. Git Collaboration
+
+- **What learned a new one:**
+
+  - Git commands: `push`, `fetch`, `pull`, ...
+  - I learned that behind the 'origin' (or whatever name is used as repo shortname) is just a url to the remote repository. Therefore, using of `git https://username@github.com/username/project` identical to `git <remote-name>`.
+  - `git remote` to log remote name, `git <remote-name> -v` to log remote name + full adress.
+  - I learned `git remote` common subcommands used to manage remotes:
+    | Command | Usage |
+    | --- | --- |
+    | `git remote add <remote-name> <remote-link>` | link local and remote repos |
+    | `git remote remove <remote-name>`| disconnect from remote |
+  - Learned how to sync local and remote branches with `git fetch <remote-name> <branch>`, `git pull <remote-name> <branch>`, `git push <remote-name> <branch>`.
+  - I learned that local representation of remote branch is called 'tracking branch'.
+
+    > tracking branch is local branch which represents remote branch.
+    >
+    > origin/master in the local repository is called a _tracking branch_ because it's tracking the progress of the master branch on the remote repository.
+
+  - I learned `git shortlog` command to log all commits by authors, `-s` flag to show only author & number of commits, `-n` flag to sort authors by commits number, `git log --author=..` to log commits of specific contributor.
+  - I learned `git <output> --grep <text>` command which can be used in different variations to find specific parts of output with defined text. For example, `git log --oneline --grep bug` to watch all commits related to bugs.
+
+- **What surprised**
+
+  I was surprised to find `git <output> --grep=<text>`/`git <output> --grep <text>` command in git (Hello, Linux and its `<output> | grep <text>` command). Pretty nice command both for computer-level and git aimes.
+
+[![screenshots-placeholder](./markdown-styling/screenshots-icon.png)](./git/git-collaboration)
+
+---
+
+### 2. Linux CLI and HTTP
+
+#### 2.1. [Linux Survival](https://linuxsurvival.com/linux-tutorial-introduction/)
 
 - **What learned a new one:**
 
@@ -73,33 +129,27 @@
 
   I was surprised that absolute path starts from `/`. I always used relative paths starting with `./` and used to think that `./` === `/`. By making some experements in terminal i understood that _absolute path_ starts from `/` and _relative path_ starts from `./` or right from file/directory name. I also realized that each command has both input and output where input - set or arguments defined with command and output - content printed in terminal.
 
-- **What will be used in practice**
-
-  I will use most of the commands i acquainted with because it represents 20% of commands which can cover up to 80% of work to do in terminal.
-
-- **General overview**
-
-  I didn't use Linux before, but i have experience with other UNIX-based OS and Windows. Due to fact that Linux is used the most in software engineering, this course was necessary part for me. I was scared a bit at the very beginning but as i started to execute interactive tasks i understood that it is not that big difference between one and another OS (especially between UNIX-based). Thanks to this set of tasks i clarified for myself how paths are constructed. I mean, i always used `cd ../` without knowing of how it actually works. And now i got a context.
-
-[![screenshots-placeholder](./screenshots-icon.png)](./linux-cli/linux-survival.png)
+[![screenshots-placeholder](./markdown-styling/screenshots-icon.png)](./linux-cli/linux-survival.png)
 
 ---
 
-## 3. HTML & CSS
+## FRONT-END BASICS
+
+### 3. HTML & CSS
 
 - **What learned a new one:**
-  - [x] Selectors and Visual Rules
-  - [x] The Box Model
-  - [x] Display and Positioning
-  - [x] Colors & Typography
-  - [x] Flexbox
-  - [x] Grid
+  - Selectors and Visual Rules
+  - The Box Model
+  - Display and Positioning
+  - Colors & Typography
+  - Flexbox
+  - Grid
 
-[![screenshots-placeholder](./screenshots-icon.png)](./html-css)
+[![screenshots-placeholder](./markdown-styling/screenshots-icon.png)](./html-css)
 
 ---
 
-## 4. Javascript
+### 4. Javascript
 
 - **What learned a new one:**
   - [x] Basic javascript
@@ -113,13 +163,13 @@
   - [x] Intermediate algorithm scripting
   - [ ] JavaScript algorithms and data structures projects
 
-[![screenshots-placeholder](./screenshots-icon.png)](./js/FFC_JavaScript_Algorithms_and_Data_Structures_Certification.png)
+[![screenshots-placeholder](./markdown-styling/screenshots-icon.png)](./js/FFC_JavaScript_Algorithms_and_Data_Structures_Certification.png)
 
 ---
 
-## 5. Document Object Model
+### 5. Document Object Model
 
-### 5.1. [JavaScript and the DOM](https://classroom.udacity.com/courses/ud117)
+#### 5.1. [JavaScript and the DOM](https://classroom.udacity.com/courses/ud117)
 
 - **What learned a new one:**
   - The `.appendChild()` method will move an element from its current position to the new position.
@@ -173,10 +223,38 @@
   - Event objects, event phases, event delegation and Events tab in devtools.
   - Code performance testing and optimization.
 
-[![screenshots-placeholder](./screenshots-icon.png)](./document-object-model/JavaScript-and-the-DOM.png)
+[![screenshots-placeholder](./markdown-styling/screenshots-icon.png)](./document-object-model/JavaScript-and-the-DOM.png)
 
-### 5.2. [freecodecamp Algorithm Scripting Challenges](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/)
+#### 5.2. [freecodecamp Algorithm Scripting Challenges](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/)
 
-[![screenshots-placeholder](./screenshots-icon.png)](./document-object-model/freecodecamp-Algorithm-Scripting-Challenges.png)
+[![screenshots-placeholder](./markdown-styling/screenshots-icon.png)](./document-object-model/freecodecamp-Algorithm-Scripting-Challenges.png)
+
+---
+
+### 6. Building a Tiny JS World (pre-OOP) - practice
+
+---
+
+### 7. Object oriented JS - practice
+
+---
+
+### 8. OOP exercise - practice
+
+---
+
+### 9. Offline Web Applications
+
+---
+
+### 10. Memory pair game — real project
+
+---
+
+### 11. Website Performance Optimization
+
+---
+
+### 12. Friends App - real project
 
 ---
