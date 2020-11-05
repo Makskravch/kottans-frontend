@@ -2,9 +2,9 @@
 
 ## My schedule and progress
 
-- [x] [Git and GitHub](#1-git)
-  - [Git Basics](#1.1-git-basics)
-  - [Git Collaboration](#1.2-git-collaboration)
+- [x] [Git and GitHub](#1-git-and-gitHub)
+  - [x] [Git Basics](#1.1-git-basics)
+  - [x] [Git Collaboration](#1.2-git-collaboration)
 - [x] [Linux CLI and HTTP](#2-linux-cli-and-http)
 - [x] [HTML & CSS](#3-html--css)
 - [x] [JavaScript](#4-javascript)
