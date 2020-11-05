@@ -2,12 +2,16 @@
 
 ## My schedule and progress
 
-- [x] [Git and GitHub](#git)
-  - [Git Basics](#git-basics)
-  - [Git Collaboration](#git-collaboration)
-- [x] [Linux CLI and HTTP](#linux-cli-and-http)
-- [x] [HTML & CSS](#html--css)
-- [x] [JavaScript](#javascript)
+- [x] [Git and GitHub](#1.-git)
+  - [Git Basics](#1.1.-git-basics)
+  - [Git Collaboration](#1.2.-git-collaboration)
+- [x] [Linux CLI and HTTP](#2.-linux-cli-and-http)
+- [x] [HTML & CSS](#3.-html--css)
+- [x] [JavaScript](#4.-javascript)
+
+- [x] [Document Object Model](#5.-document-object-model)
+  - [x][javascript and the dom](#5.1.-javaScript-and-thedOM)
+  - [x][freecodecamp algorithm scripting challenges](#5.2.-freecodecamp-algorithm-scripting-challenges)
 
 ## 1. Git and GitHub
 
@@ -24,7 +28,7 @@
 - [x] Push & Pull -- Git Remotes
 - [x] Git commands: `init`, `clone`, `add`, `commit`, `checkout`, `branch`, `merge`, ...
 
-[![screenshots-icon](./screenshots-icon.png)](./git/git-basics)
+[![screenshots-placeholder](./screenshots-icon.png)](./git/git-basics)
 
 ### 1.2. Git Collaboration
 
@@ -36,7 +40,7 @@
 - [x] I am better understand pull request and Fork repo
 - [x] Staying in Sync With A Remote Repo
 
-[![screenshots-icon](./screenshots-icon.png)](./git/git-collaboration)
+[![screenshots-placeholder](./screenshots-icon.png)](./git/git-collaboration)
 
 ---
 
@@ -78,7 +82,7 @@
 
   I didn't use Linux before, but i have experience with other UNIX-based OS and Windows. Due to fact that Linux is used the most in software engineering, this course was necessary part for me. I was scared a bit at the very beginning but as i started to execute interactive tasks i understood that it is not that big difference between one and another OS (especially between UNIX-based). Thanks to this set of tasks i clarified for myself how paths are constructed. I mean, i always used `cd ../` without knowing of how it actually works. And now i got a context.
 
-[![screenshots-icon](./screenshots-icon.png)](./linux-cli/linux-survival.png)
+[![screenshots-placeholder](./screenshots-icon.png)](./linux-cli/linux-survival.png)
 
 ---
 
@@ -92,7 +96,7 @@
   - [x] Flexbox
   - [x] Grid
 
-[![screenshots-icon](./screenshots-icon.png)](./html-css)
+[![screenshots-placeholder](./screenshots-icon.png)](./html-css)
 
 ---
 
@@ -110,17 +114,23 @@
   - [x] Intermediate algorithm scripting
   - [ ] JavaScript algorithms and data structures projects
 
-[![screenshots-icon](./screenshots-icon.png)](./js/FFC_JavaScript_Algorithms_and_Data_Structures_Certification.png)
+[![screenshots-placeholder](./screenshots-icon.png)](./js/FFC_JavaScript_Algorithms_and_Data_Structures_Certification.png)
 
 ---
 
 ## 5. Document Object Model
 
-5.1. JavaScript and the DOM
+### 5.1. [JavaScript and the DOM](https://classroom.udacity.com/courses/ud117)
 
 - **What learned a new one:**
   - The `.appendChild()` method will move an element from its current position to the new position.
+  - I learned difference between `textContent` and `innerText` properties:
+    - `textContent` prop returns original version of content, while `innerText` - rendered one (considers css styles).
+    - `textContent` gets the content of all elements, including `<script>` and `<style>` elements while `innerText` only shows content of “human-readable” elements.
   - The Chrome browser has a special `monitorEvents()` function that will let us see different events as they are occurring.
+  - I learned about event handling strategies:
+    - _from inner to outer_ (default) - invoke events from target to outermost. Listeners invoked in bubbling stage.
+    - _from outer to inner (with 3rd arg true)_ - invoke events from outermost to target. Listeners invoked in capturing stage.
   - The standard way to measure how long it takes code to run is by using `performance.now()`.
   - Changes made to a DocumentFragment `.createDocumentFragment()` happen off-screen; there's no reflow and repaint cost while you build this.
 - **What surprised**
@@ -151,16 +161,23 @@
     generateParagraphs();
     ```
 
+- **What surprised**
+
+  - Info that due to support issues earlier developers had to write different code to perform the same action in different browsers. Handling this was one of the main purposes of jQuery. You write abstract, jQuery-specific methods, jQuery converts it to compatible for different browser methods. Now browsers try to support standarts so jQuery is not that used. I was surprised to know that jQuery triggered development of new DOM methods.
+  - Info that event callbacks are called _listeners_(listener function) and defining callback called _listener registration_.
+  - Ability to see/temporary remove registered event of selected element and its ancestors in `Event` tab.
+  - I learned how to replace 1 big block of code which executed synchronously with n small blocks of code which executed asynchronously (by using `SetTimeout` with zero delay). Why it is important? Because when sync block of code too big, it will occupy the stack for too long and it will be noticeable for user. For example, when `for loop` starts to run, all other commands won't be able to run on stack and if cycle runs long time page inaccessibility will be noticeable. If the cycle runs for 5 seconds, the user won't be able to interact with the page in any way for 5 seconds.
+
 - **What will be used in practice**
   - Break Up Long-Running Code
+  - Methods to select/modify/delete DOM elements.
+  - Event objects, event phases, event delegation and Events tab in devtools.
+  - Code performance testing and optimization.
 
-[![screenshots-icon](./screenshots-icon.png)](./document-object-model/JavaScript-and-the-DOM.png)
+[![screenshots-placeholder](./screenshots-icon.png)](./document-object-model/JavaScript-and-the-DOM.png)
 
-5.2. freecodecamp Algorithm Scripting Challenges
+### 5.2. [freecodecamp Algorithm Scripting Challenges](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/)
 
-- **What learned a new one:** text placeholder
-- **What surprised** text placeholder
-- **What will be used in practice** text placeholder
-- **General overview** text placeholder
+[![screenshots-placeholder](./screenshots-icon.png)](./document-object-model/freecodecamp-Algorithm-Scripting-Challenges.png)
 
 ---
